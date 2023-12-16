@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 
 const ExampleUseForm = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, formState:{ errors }, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
@@ -18,6 +18,7 @@ const ExampleUseForm = () => {
             required: true,
             maxLength: 10
           })} />
+          {errors.nombre?.type === 'required' && <p style={{color:"red"}}>El campo nombre es requerido</p>}
         </div>
         <div>
           <label>Dirección</label>
