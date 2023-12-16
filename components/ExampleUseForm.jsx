@@ -10,7 +10,7 @@ const ExampleUseForm = () => {
     console.log(data);
   };
 
-  const showPhone = watch('showPhone')
+  const incluirTelefono = watch('incluirTelefono')
 
   return (
     <>
@@ -57,10 +57,13 @@ const ExampleUseForm = () => {
             <label>¿Desea incluir el número de teléfono?</label>
             <input type='checkbox' {...register('incluirTelefono')}></input>
         </div>
-        <div>
-            <label>Teléfono</label>
-            <input type='text' {...register('telefono')}></input>
-        </div>
+        {incluirTelefono && (
+            <div>
+                <label>Teléfono</label>
+                <input type='text' {...register('telefono')}></input>
+            </div>
+        )}
+        
 
         <input type='submit' value='Enviar' />
       </form>
