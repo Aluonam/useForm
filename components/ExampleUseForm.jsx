@@ -3,11 +3,14 @@ import { useForm } from 'react-hook-form';
 import { ageValidator } from './validators';
 
 const ExampleUseForm = () => {
+
   const { register, formState:{ errors }, watch, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
   };
+
+  const showPhone = watch('showPhone')
 
   return (
     <>
@@ -50,6 +53,15 @@ const ExampleUseForm = () => {
             <option value='fr'>Francia</option>
           </select>
         </div>
+        <div>
+            <label>¿Desea incluir el número de teléfono?</label>
+            <input type='checkbox' {...register('incluirTelefono')}></input>
+        </div>
+        <div>
+            <label>Teléfono</label>
+            <input type='text' {...register('telefono')}></input>
+        </div>
+
         <input type='submit' value='Enviar' />
       </form>
     </>
