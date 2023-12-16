@@ -19,6 +19,7 @@ const ExampleUseForm = () => {
             maxLength: 10
           })} />
           {errors.nombre?.type === 'required' && <p style={{color:"red"}}>El campo nombre es requerido</p>}
+          {errors.nombre?.type === 'maxLength' && <p style={{color:"red"}}>El campo debe tener menos de 10 caracteres</p>}
         </div>
         <div>
           <label>Dirección</label>
