@@ -17,9 +17,17 @@ const ExampleUseForm = () => {
           <input type='text' {...register('nombre',{
             required: true,
             maxLength: 10
-          })} />
+            })} />
           {errors.nombre?.type === 'required' && <p style={{color:"red"}}>El campo nombre es requerido</p>}
           {errors.nombre?.type === 'maxLength' && <p style={{color:"red"}}>El campo debe tener menos de 10 caracteres</p>}
+        </div>
+        <div>
+          <label>Email</label>
+          <input type='text' {...register('email', {
+                    pattern:   /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/
+                } // expresiones regulares de validación de email  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/
+            )} />
+            {errors.email?.type === 'pattern' && <p style={{color: "orange"}}>El email es incorrecto</p>}
         </div>
         <div>
           <label>Dirección</label>
