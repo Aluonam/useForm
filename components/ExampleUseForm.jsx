@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { ageValidator } from './validators';
 
 const ExampleUseForm = () => {
   const { register, formState:{ errors }, handleSubmit } = useForm();
@@ -35,7 +36,10 @@ const ExampleUseForm = () => {
         </div>
         <div>
           <label>Edad</label>
-          <input type='text' {...register('edad')} />
+          <input type='text' {...register('edad',{
+            validate: ageValidator // *LLama a la función exportada de validators.jsx y debe ser importado arriba
+          })} />
+          {errors.edad && <p>La edad debe estar entre 18 y 65</p>}
         </div>
         <div>
           <label>País</label>
