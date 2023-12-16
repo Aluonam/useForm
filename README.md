@@ -8,15 +8,15 @@
 
 ### Opciones que permite:: 
 
-1. **Validar:**
+1. **Validar**
 
-2. **Mostrar error:**
+2. **Mostrar error**
 
-3. **Watch:**
+3. **Watch**
 
-4. **Componente oculto:**
+4. **Componente oculto**
 
-5. **Valores predeterminados:** 
+5. **Valores predeterminados** 
 
 
 https://app.gitbook.com/o/3wX0P3syS8PuXaIwiTNX/s/iLpKyGAQ9lfL0iHxIIny/~/changes/143/reactjs/reacthooks/useform 
