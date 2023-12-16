@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { ageValidator } from './validators';
 
 const ExampleUseForm = () => {
-  const { register, formState:{ errors }, handleSubmit } = useForm();
+  const { register, formState:{ errors }, watch, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
