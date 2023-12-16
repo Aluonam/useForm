@@ -12,6 +12,7 @@ const ExampleUseForm = () => {
   return (
     <>
       <h2>Formulario con useForm</h2>
+      <p>Nombre: {watch('nombre')}</p>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label>Nombre</label>
