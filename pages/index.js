@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
-import UseformExample from '@/components/useformExample'
+import ExampleUseForm from '@/components/ExampleUseForm'
 
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main}`}>
-       <UseformExample></UseformExample>
+       <ExampleUseForm></ExampleUseForm>
       </main>
     </>
   )
