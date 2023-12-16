@@ -14,7 +14,10 @@ const ExampleUseForm = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label>Nombre</label>
-          <input type='text' {...register('nombre')} />
+          <input type='text' {...register('nombre',{
+            required: true,
+            maxLength: 10
+          })} />
         </div>
         <div>
           <label>Dirección</label>
