@@ -4,7 +4,12 @@ import { ageValidator } from './validators';
 
 const ExampleUseForm = () => {
 
-  const { register, formState:{ errors }, watch, handleSubmit } = useForm();
+  const { register, formState:{ errors }, watch, handleSubmit } = useForm({
+    defaultValues: {
+        nombre: 'Mario',
+        direccion: 'Calle'
+    }
+  });
 
   const onSubmit = (data) => {
     console.log(data);
